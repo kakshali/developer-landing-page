@@ -83,10 +83,14 @@ body {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.form-group textarea { resize: vertical; }
+.form-group textarea {
+    resize: vertical;
+}
 
 .form-group input::placeholder,
-.form-group textarea::placeholder { color: #9aa4b2; }
+.form-group textarea::placeholder {
+    color: #9aa4b2;
+}
 
 .form-group input:focus,
 .form-group textarea:focus {
@@ -120,28 +124,51 @@ body {
     box-shadow: 0 8px 18px rgba(59, 130, 246, 0.25);
 }
 
-.btn-primary:hover { transform: translateY(-1px); }
-.btn-primary:active { transform: translateY(0); }
+.btn-primary:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
 
 .privacy-note {
     color: #6b7280;
     font-size: 14px;
 }
 
-.privacy-note a { color: #3b82f6; text-decoration: none; }
-.privacy-note a:hover { text-decoration: underline; }
+.privacy-note a {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.privacy-note a:hover {
+    text-decoration: underline;
+}
 
 @media (max-width: 768px) {
-    .contact-card { padding: 24px; }
-    .contact-title { font-size: 26px; }
-    .form-row { grid-template-columns: 1fr; }
-    .form-actions { flex-direction: column; align-items: stretch; }
+    .contact-card {
+        padding: 24px;
+    }
+
+    .contact-title {
+        font-size: 26px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 
 /* -------------------- Header -------------------- */
 header {
     background-color: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -172,7 +199,8 @@ header {
     display: flex;
     gap: 15px;
     align-items: center;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
 }
 
 
@@ -203,8 +231,8 @@ header {
     top: 35px;
     left: 0;
     background-color: white;
-    border: none;          
-    box-shadow: none;     
+    border: none;
+    box-shadow: none;
     list-style: none;
     padding: 10px 0;
     min-width: 220px;

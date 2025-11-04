@@ -280,171 +280,200 @@ body {
 }
 
 
-/* ===== Unique Why Choose Section ===== */
-.why-choose-unique {
-  padding: 90px 0;
-  background: whitesmoke;
-  position: relative;
-  overflow: hidden;
+/* ===== Services (10 hex items) ===== */
+/* ===== Services (10 hex items) ===== */
+/* ===== Section Heading (Title + Subtitle) ===== */
+.text-center {
+  text-align: center;
 }
 
-.why-choose-unique::before {
-  content: "";
-  position: absolute;
-  width: 160px;
-  height: 160px;
-  background: radial-gradient(circle, rgba(52, 152, 219, 0.25) 0%, transparent 70%);
-  top: -60px;
-  left: -60px;
-  border-radius: 50%;
+.mb-5 {
+  margin-bottom: 3rem; /* spacing below the heading section */
 }
 
-.why-choose-unique > .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.why-title {
+.wc-title {
   font-size: 36px;
   font-weight: 800;
   color: #0f2b46;
-  text-align: center;
-}
-
-.why-sub {
-  color: #546171;
-  font-size: 17px;
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.benefit-grid-unique {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 25px;
-}
-
-.benefit-card-unique {
-  background: #fff;
-  border-radius: 18px;
-  padding: 30px 20px;
-  text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s ease;
+  line-height: 1.3;
+  margin-bottom: 15px;
   position: relative;
-  overflow: hidden;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
-.benefit-card-unique::after {
+/* Decorative underline below title */
+.wc-title::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.08), rgba(0, 200, 255, 0.05));
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  bottom: 0;
+  left: 50%;
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+  transform: translateX(-50%);
+  border-radius: 5px;
 }
 
-.benefit-card-unique:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+.wc-sub {
+  font-size: 17px;
+  color: #546171;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
-.benefit-card-unique:hover::after {
-  opacity: 1;
-}
-
-.benefit-icon-unique {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #007bff, #00c6ff);
-  color: #fff;
-  font-size: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 18px;
-  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3);
-  transition: all 0.3s ease;
-}
-
-.benefit-card-unique:hover .benefit-icon-unique {
-  transform: rotate(10deg) scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.5);
-}
-
-.benefit-title-unique {
-  font-size: 13px;
-  font-weight: 700;
-  color: #0f2b46;
-  line-height: 1.4;
-  margin-top: 8px;
-}
-
-/* ===== Responsive Design ===== */
-
-/* Large Tablets and Small Desktops (≤1200px) */
-@media (max-width: 1200px) {
-  .benefit-grid-unique {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-}
-
-/* Tablets (≤768px) */
+/* ===== Responsive ===== */
 @media (max-width: 768px) {
-  .why-title {
-    font-size: 30px;
+  .wc-title {
+    font-size: 28px;
   }
 
-  .why-sub {
+  .wc-sub {
     font-size: 15px;
-    margin-bottom: 40px;
-  }
-
-  .benefit-grid-unique {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .benefit-card-unique {
-    padding: 25px 15px;
-  }
-
-  .benefit-icon-unique {
-    width: 70px;
-    height: 70px;
-    font-size: 26px;
+    padding: 0 20px;
   }
 }
 
-/* Mobile (≤480px) */
 @media (max-width: 480px) {
-  .why-title {
-    font-size: 26px;
-  }
-
-  .why-sub {
-    font-size: 14px;
-  }
-
-  .benefit-grid-unique {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .benefit-card-unique {
-    padding: 22px 14px;
-  }
-
-  .benefit-icon-unique {
-    width: 60px;
-    height: 60px;
+  .wc-title {
     font-size: 24px;
   }
 
-  .benefit-title-unique {
-    font-size: 12px;
+  .wc-sub {
+    font-size: 14px;
   }
+}
+
+.hsd-services {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.hsd-services > .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.services-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(160px, 1fr));
+  gap: 28px;
+  justify-items: center;
+}
+
+/* Theme colors */
+.service-item {
+  --grad: linear-gradient(135deg, #ffb347, #ff6600);
+  --glow: rgba(255, 102, 0, 0.25);
+}
+
+.service-item.theme-blue {
+  --grad: linear-gradient(135deg, #6092dd, #5a27e6);
+  --glow: rgba(96, 146, 221, 0.25);
+}
+
+.service-item.theme-orange {
+  --grad: linear-gradient(135deg, #ffb347, #ff6600);
+  --glow: rgba(255, 102, 0, 0.25);
+}
+
+/* === HEX CARD (Keep same shape, add shadow) === */
+.service-hex {
+  position: relative;
+  width: 220px;
+  aspect-ratio: 1.15;
+  background: #ffffff;
+  clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* ✅ soft neutral shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Gradient border + glow layer */
+.service-hex::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: var(--grad);
+  clip-path: inherit;
+  z-index: 0;
+  filter: drop-shadow(0 8px 16px var(--glow)); /* ✅ subtle theme glow */
+}
+
+/* Inner white area to create border effect */
+.service-hex::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  background: #ffffff;
+  clip-path: inherit;
+  z-index: 1;
+}
+
+/* Inner Content */
+.service-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 26px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Icon + Text */
+.service-content i {
+  font-size: 28px;
+  color: #0f2b46;
+  margin-bottom: 10px;
+}
+
+.service-content h3 {
+  margin: 6px 0 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f2b46;
+}
+
+.service-content p {
+  margin: 0;
+  font-size: 12px;
+  color: #546171;
+}
+
+/* Hover effect: lift + stronger glow */
+.service-item:hover .service-hex {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18); /* ✅ stronger shadow */
+}
+
+.service-item.theme-blue:hover .service-hex::before {
+  filter: drop-shadow(0 8px 24px rgba(96, 146, 221, 0.45));
+}
+
+.service-item.theme-orange:hover .service-hex::before {
+  filter: drop-shadow(0 8px 24px rgba(255, 102, 0, 0.45));
+}
+
+/* Responsive columns */
+@media (max-width: 1199px) {
+  .services-row { grid-template-columns: repeat(4, minmax(160px, 1fr)); }
+}
+
+@media (max-width: 991px) {
+  .services-row { grid-template-columns: repeat(3, minmax(160px, 1fr)); }
+}
+
+@media (max-width: 767px) {
+  .services-row { grid-template-columns: repeat(2, 1fr); }
+  .service-hex { width: 200px; }
+}
+
+@media (max-width: 480px) {
+  .services-row { grid-template-columns: repeat(2, 1fr); }
+  .service-hex { width: 180px; }
 }

@@ -283,7 +283,7 @@ body {
 /* ===== Unique Why Choose Section ===== */
 .why-choose-unique {
   padding: 90px 0;
-  background: linear-gradient(135deg, #f5f9ff, #e8f0ff);
+  background: whitesmoke;
   position: relative;
   overflow: hidden;
 }
@@ -375,12 +375,76 @@ body {
 }
 
 .benefit-title-unique {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 700;
   color: #0f2b46;
   line-height: 1.4;
   margin-top: 8px;
 }
 
-/* ===== Responsive ===== */
-@media (max-width:
+/* ===== Responsive Design ===== */
+
+/* Large Tablets and Small Desktops (≤1200px) */
+@media (max-width: 1200px) {
+  .benefit-grid-unique {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+  .why-title {
+    font-size: 30px;
+  }
+
+  .why-sub {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  .benefit-grid-unique {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .benefit-card-unique {
+    padding: 25px 15px;
+  }
+
+  .benefit-icon-unique {
+    width: 70px;
+    height: 70px;
+    font-size: 26px;
+  }
+}
+
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  .why-title {
+    font-size: 26px;
+  }
+
+  .why-sub {
+    font-size: 14px;
+  }
+
+  .benefit-grid-unique {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .benefit-card-unique {
+    padding: 22px 14px;
+  }
+
+  .benefit-icon-unique {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .benefit-title-unique {
+    font-size: 12px;
+  }
+}

@@ -501,38 +501,53 @@ body {
   }
 }
 
+/* ===== Hire Section ===== */
 .hire-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* Centers horizontally */
+  justify-content: center;
   text-align: center;
-  padding: 60px 0;
+  padding: 0px 0;
 }
 
 .hire-text {
   color: #016b94;
   font-size: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
   font-weight: 600;
 }
 
 .hire-box {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(to right, #0076b7, #00b1b7);
   border-radius: 12px;
-  padding: 12px 20px;
-  gap: 12px;
+  padding-left: 5px;
+  padding-bottom: 20px;
+  padding-right: 5px;
+  padding-top: 5px;
+  gap: 50px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 10px  10px 10px auto; 
 }
 
+/* ===== Inner Elements ===== */
 .price-section {
   display: flex;
   align-items: center;
+    justify-content: center;
   gap: 8px;
   color: white;
   font-weight: 700;
   font-size: 20px;
+  text-align: center;
 }
-
+.price-text {
+  display: inline-block;
+  line-height: 1;  /* removes extra vertical space */
+}
 .price-section i {
   background: white;
   color: #0076b7;
@@ -545,7 +560,7 @@ body {
   background: white;
   color: #004b63;
   border: none;
-  padding: 10px 24px;
+  padding: 10px 20px;
   border-radius: 8px;
   font-weight: 700;
   cursor: pointer;
@@ -557,29 +572,13 @@ body {
   transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
-  .hire-box {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-}
 /* ===== Responsive Styling ===== */
 
 /* Tablets (≤ 992px) */
 @media (max-width: 992px) {
-  .hire-text {
-    font-size: 17px;
-  }
-
   .price-section {
     font-size: 18px;
   }
-
-  .hire-box {
-    padding: 12px 20px;
-  }
-
   .hire-btn {
     padding: 8px 20px;
   }
@@ -590,15 +589,6 @@ body {
   .hire-section {
     padding: 40px 0;
   }
-
-  .hire-text {
-    font-size: 16px;
-  }
-
-  .price-section {
-    font-size: 17px;
-  }
-
   .hire-box {
     flex-wrap: wrap;
     gap: 12px;
@@ -609,39 +599,13 @@ body {
 @media (max-width: 600px) {
   .hire-box {
     flex-direction: column;
-    gap: 10px;
     text-align: center;
+    gap: 10px;
     padding: 16px;
     width: 90%;
+    margin: 0 auto;
   }
-
-  .hire-text {
-    font-size: 15px;
-  }
-
-  .price-section {
-    font-size: 16px;
-  }
-
   .hire-btn {
     width: 100%;
-    padding: 12px;
-    font-size: 15px;
-  }
-}
-
-/* Extra Small Devices (≤ 400px) */
-@media (max-width: 400px) {
-  .hire-text {
-    font-size: 14px;
-  }
-
-  .price-section {
-    font-size: 15px;
-  }
-
-  .hire-btn {
-    font-size: 14px;
-    padding: 10px;
   }
 }

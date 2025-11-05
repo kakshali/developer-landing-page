@@ -371,17 +371,17 @@ body {
 
 /* Theme colors */
 .service-item {
-  --grad:  linear-gradient(90deg, rgba(2, 0, 36, 1) 0, rgba(34, 185, 229, 1) 1%, rgb(230, 84, 17) 100%) !important;
+  --grad:  linear-gradient(90deg, #fe4c1c, #22b9e5, #414d9d) !important;
   --glow: rgba(255, 102, 0, 0.25);
 }
 
 .service-item.theme-blue {
-  --grad:  linear-gradient(90deg, rgba(2, 0, 36, 1) 0, rgba(34, 185, 229, 1) 1%, rgb(248, 165, 12) 100%) !important;
+  --grad:  linear-gradient(90deg, #fe4c1c, #22b9e5, #414d9d) !important;
   --glow: rgba(96, 146, 221, 0.25);
 }
 
 .service-item.theme-orange {
-  --grad:  linear-gradient(90deg, rgba(2, 0, 36, 1) 0, rgba(34, 185, 229, 1) 1%, rgba(236, 85, 14, 0.801) 100%) !important;
+  --grad: linear-gradient(90deg, #fe4c1c, #22b9e5, #414d9d) !important;
   --glow: rgba(255, 102, 0, 0.25);
 }
 

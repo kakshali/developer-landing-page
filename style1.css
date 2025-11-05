@@ -527,7 +527,7 @@ body {
   padding-left: 5px;
   padding-bottom: 20px;
   padding-right: 5px;
-  padding-top: 5px;
+  padding-top: 20px;
   gap: 50px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin: 10px  10px 10px auto; 
@@ -544,14 +544,11 @@ body {
   font-size: 20px;
   text-align: center;
 }
-.price-text {
-  display: inline-block;
-  line-height: 1;  /* removes extra vertical space */
-}
+
 .price-section i {
   background: white;
   color: #0076b7;
-  padding: 6px;
+  padding: 8px;
   border-radius: 50%;
   font-size: 14px;
 }
@@ -570,6 +567,11 @@ body {
 .hire-btn:hover {
   background: #e0f7fa;
   transform: translateY(-2px);
+}
+
+/* Ensure email button in hero hire box aligns with price line */
+.hire-box .hire-btn {
+  margin-top: 0;
 }
 
 /* ===== Responsive Styling ===== */

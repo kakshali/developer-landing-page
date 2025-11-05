@@ -41,13 +41,14 @@ body {
 
 .hsd-stats {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /* 👈 2 columns */
+  grid-template-columns: repeat(3, 1fr);
+  /* 👈 now 3 in one line */
   gap: 24px;
   margin-top: 20px;
   justify-items: center;
-  /* center align horizontally */
+  /* center horizontally */
   align-items: center;
+  /* center vertically */
 }
 
 .hsd-stat {
@@ -71,8 +72,8 @@ body {
 /* Optional: make it single-row on large screens */
 @media (min-width: 992px) {
   .hsd-stats {
-    grid-template-columns: repeat(2, 1fr);
-    /* 4 in one row on desktop */
+    grid-template-columns: repeat(3, 1fr);
+    /* ensure all 3 in one line on desktop */
   }
 }
 
@@ -82,7 +83,7 @@ body {
 .hsd-illustration {
   width: 100%;
   height: 360px;
-  background: url("1.png") center/contain no-repeat;
+  background: url("4.png") center/contain no-repeat;
 }
 
 /* Responsive */
@@ -98,7 +99,9 @@ body {
   }
 
   .hsd-stats {
-    justify-content: center;
+    grid-template-columns: 1fr;
+    /* mobile: single column */
+    justify-items: center;
   }
 
   .hsd-cta {
@@ -122,7 +125,7 @@ body {
 .comp-illustration {
   width: 100%;
   height: 320px;
-  background: url("2.png") left center/contain no-repeat;
+  background: url("7.png") left center/contain no-repeat;
 }
 
 .comp-title {
@@ -230,7 +233,8 @@ body {
 }
 
 .hire-btn {
-  background: linear-gradient(to right, #ffb347, #ff6600); /* left → right orange gradient */
+  background: linear-gradient(to right, #ffb347, #ff6600);
+  /* left → right orange gradient */
   color: #fff;
   border: none;
   padding: 10px 28px;
@@ -242,7 +246,8 @@ body {
 }
 
 .hire-btn:hover {
-  background: linear-gradient(to right, #6092dd, #5a27e6); /* lighter gradient on hover */
+  background: linear-gradient(to right, #6092dd, #5a27e6);
+  /* lighter gradient on hover */
 }
 
 
@@ -288,7 +293,8 @@ body {
 }
 
 .mb-5 {
-  margin-bottom: 3rem; /* spacing below the heading section */
+  margin-bottom: 3rem;
+  /* spacing below the heading section */
 }
 
 .wc-title {
@@ -350,7 +356,7 @@ body {
   background: #ffffff;
 }
 
-.hsd-services > .container {
+.hsd-services>.container {
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 20px;
@@ -387,7 +393,8 @@ body {
   aspect-ratio: 1.15;
   background: #ffffff;
   clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* ✅ soft neutral shadow */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  /* ✅ soft neutral shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -399,7 +406,8 @@ body {
   background: var(--grad);
   clip-path: inherit;
   z-index: 0;
-  filter: drop-shadow(0 8px 16px var(--glow)); /* ✅ subtle theme glow */
+  filter: drop-shadow(0 8px 16px var(--glow));
+  /* ✅ subtle theme glow */
 }
 
 /* Inner white area to create border effect */
@@ -448,7 +456,8 @@ body {
 /* Hover effect: lift + stronger glow */
 .service-item:hover .service-hex {
   transform: translateY(-6px);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18); /* ✅ stronger shadow */
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+  /* ✅ stronger shadow */
 }
 
 .service-item.theme-blue:hover .service-hex::before {
@@ -461,19 +470,178 @@ body {
 
 /* Responsive columns */
 @media (max-width: 1199px) {
-  .services-row { grid-template-columns: repeat(4, minmax(160px, 1fr)); }
+  .services-row {
+    grid-template-columns: repeat(4, minmax(160px, 1fr));
+  }
 }
 
 @media (max-width: 991px) {
-  .services-row { grid-template-columns: repeat(3, minmax(160px, 1fr)); }
+  .services-row {
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+  }
 }
 
 @media (max-width: 767px) {
-  .services-row { grid-template-columns: repeat(2, 1fr); }
-  .service-hex { width: 200px; }
+  .services-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-hex {
+    width: 200px;
+  }
 }
 
 @media (max-width: 480px) {
-  .services-row { grid-template-columns: repeat(2, 1fr); }
-  .service-hex { width: 180px; }
+  .services-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-hex {
+    width: 180px;
+  }
+}
+
+.hire-section {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.hire-text {
+  color: #016b94;
+  font-size: 16px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.hire-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #0076b7, #00b1b7);
+  border-radius: 12px;
+  padding: 12px 20px;
+  gap: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.price-section i {
+  background: white;
+  color: #0076b7;
+  padding: 6px;
+  border-radius: 50%;
+  font-size: 14px;
+}
+
+.hire-btn {
+  background: white;
+  color: #004b63;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hire-btn:hover {
+  background: #e0f7fa;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .hire-box {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+/* ===== Responsive Styling ===== */
+
+/* Tablets (≤ 992px) */
+@media (max-width: 992px) {
+  .hire-text {
+    font-size: 17px;
+  }
+
+  .price-section {
+    font-size: 18px;
+  }
+
+  .hire-box {
+    padding: 12px 20px;
+  }
+
+  .hire-btn {
+    padding: 8px 20px;
+  }
+}
+
+/* Small Tablets (≤ 768px) */
+@media (max-width: 768px) {
+  .hire-section {
+    padding: 40px 0;
+  }
+
+  .hire-text {
+    font-size: 16px;
+  }
+
+  .price-section {
+    font-size: 17px;
+  }
+
+  .hire-box {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+/* Mobiles (≤ 600px) */
+@media (max-width: 600px) {
+  .hire-box {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 16px;
+    width: 90%;
+  }
+
+  .hire-text {
+    font-size: 15px;
+  }
+
+  .price-section {
+    font-size: 16px;
+  }
+
+  .hire-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+/* Extra Small Devices (≤ 400px) */
+@media (max-width: 400px) {
+  .hire-text {
+    font-size: 14px;
+  }
+
+  .price-section {
+    font-size: 15px;
+  }
+
+  .hire-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
 }

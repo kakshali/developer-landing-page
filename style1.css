@@ -1,4 +1,3 @@
-/* ===== Hire Software Developers - Alphabit Infoway ===== */
 body {
   font-family: Nunito, sans-serif;
   background-color: #fff;
@@ -11,10 +10,9 @@ body {
   background: #f9fcff;
 }
 
-/* Constrain hero content and add horizontal padding */
+/* hero content */
 .hsd-hero>.container {
   max-width: 1200px;
-  /* adjust to your desired width */
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -26,7 +24,6 @@ body {
   letter-spacing: -0.5px;
   color:#000;
   white-space: nowrap;
-  /* 👈 Prevents text from breaking into two lines */
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -43,13 +40,10 @@ body {
 .hsd-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* 👈 now 3 in one line */
   gap: 24px;
   margin-top: 20px;
   justify-items: center;
-  /* center horizontally */
   align-items: center;
-  /* center vertically */
 }
 
 .hsd-stat {
@@ -70,11 +64,9 @@ body {
   font-size: 15px;
 }
 
-/* Optional: make it single-row on large screens */
 @media (min-width: 992px) {
   .hsd-stats {
     grid-template-columns: repeat(3, 1fr);
-    /* ensure all 3 in one line on desktop */
   }
 }
 
@@ -101,7 +93,6 @@ body {
 
   .hsd-stats {
     grid-template-columns: 1fr;
-    /* mobile: single column */
     justify-items: center;
   }
 
@@ -110,7 +101,6 @@ body {
   }
 }
 
-/* ===== Competitive Rates Section ===== */
 .hsd-competitive {
   padding: 60px 0;
   background: #ffffff;
@@ -235,7 +225,6 @@ body {
 
 .hire-bt {
   background:white;
-  /* left → right orange gradient */
   color:black;
   border: none;
   padding: 10px 30px;
@@ -280,20 +269,15 @@ body {
 .about-title {
   font-weight: 700;
   font-size: 36px;
-  /* or 800 for extra bold */
 }
 
 
-/* ===== Services (10 hex items) ===== */
-/* ===== Services (10 hex items) ===== */
-/* ===== Section Heading (Title + Subtitle) ===== */
 .text-center {
   text-align: center;
 }
 
 .mb-5 {
   margin-bottom: 3rem;
-  /* spacing below the heading section */
 }
 
 .wc-title {
@@ -307,7 +291,6 @@ body {
   padding-bottom: 10px;
 }
 
-/* Decorative underline below title */
 .wc-title::after {
   content: "";
   position: absolute;
@@ -328,7 +311,6 @@ body {
   line-height: 1.7;
 }
 
-/* ===== Responsive ===== */
 @media (max-width: 768px) {
   .wc-title {
     font-size: 28px;
@@ -369,7 +351,6 @@ body {
   justify-items: center;
 }
 
-/* Theme colors */
 .service-item {
   --grad:  linear-gradient(90deg, #fe4c1c, #22b9e5, #414d9d) !important;
   --glow: rgba(255, 102, 0, 0.25);
@@ -385,7 +366,6 @@ body {
   --glow: rgba(255, 102, 0, 0.25);
 }
 
-/* === HEX CARD (Keep same shape, add shadow) === */
 .service-hex {
   position: relative;
   width: 220px;
@@ -393,11 +373,9 @@ body {
   background: #ffffff;
   clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-  /* ✅ soft neutral shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Gradient border + glow layer */
 .service-hex::before {
   content: "";
   position: absolute;
@@ -406,10 +384,8 @@ body {
   clip-path: inherit;
   z-index: 0;
   filter: drop-shadow(0 8px 16px var(--glow));
-  /* ✅ subtle theme glow */
 }
 
-/* Inner white area to create border effect */
 .service-hex::after {
   content: "";
   position: absolute;
@@ -419,7 +395,6 @@ body {
   z-index: 1;
 }
 
-/* Inner Content */
 .service-content {
   position: relative;
   z-index: 2;
@@ -432,7 +407,6 @@ body {
   text-align: center;
 }
 
-/* Icon + Text */
 .service-content i {
   font-size: 28px;
   color: #0f2b46;
@@ -452,11 +426,9 @@ body {
   color: #546171;
 }
 
-/* Hover effect: lift + stronger glow */
 .service-item:hover .service-hex {
   transform: translateY(-6px);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
-  /* ✅ stronger shadow */
 }
 
 .service-item.theme-blue:hover .service-hex::before {
@@ -505,7 +477,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* Centers horizontally */
   justify-content: center;
   text-align: center;
   padding: 0px 0;
@@ -533,7 +504,6 @@ body {
   margin: 10px 10px 10px auto;
 }
 
-/* ===== Inner Elements ===== */
 .price-section {
   display: flex;
   align-items: center;
@@ -570,12 +540,10 @@ body {
   transform: translateY(-2px);
 }
 
-/* Ensure email button in hero hire box aligns with price line */
 .hire-box .hire-btn {
   margin-top: 0;
 }
 
-/* ===== Responsive Styling ===== */
 
 /* Tablets (≤ 992px) */
 @media (max-width: 992px) {
